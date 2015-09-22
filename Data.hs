@@ -3,10 +3,10 @@ module Data where
 import Data.Set ( Set )
 import Data.Map ( Map )
 
-data Rule a = Eps
-            | Final Char
-            | Follow Char a
-            deriving ( Eq, Ord, Show, Read )
+data RuleRHS a = Eps
+               | Final Char
+               | Follow Char a
+               deriving ( Eq, Ord, Show, Read )
 
 data FA a = FA { faStates :: Set a
                , faDelta :: Map (a, Char) (Set a)
