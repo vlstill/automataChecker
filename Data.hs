@@ -15,7 +15,7 @@ data FA a = FA { faStates :: Set a
                } deriving ( Eq, Show, Read )
 
 data RG a = RG { rgNonterminals :: Set a
-               , rgRules :: Map a (Rule a)
+               , rgRules :: Map a (Set (Rule a))
                , rgInitial :: a
                } deriving ( Eq, Show, Read )
 
