@@ -1,7 +1,7 @@
 module Data where
 
 import Data.Set ( Set )
-import Data.Map
+import Data.Map ( Map )
 
 data Rule a = Eps
             | Final Char
@@ -18,4 +18,5 @@ data RG a = RG { rgNonterminals :: Set a
                , rgRules :: Map a (Rule a)
                , rgInitial :: a
                } deriving ( Eq, Show, Read )
+
 
